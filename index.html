@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STAALF — rūpniecības iekārtu remonts Rīgā</title>
+<meta name="description" content="SIA STAALF: metināšana, metālapstrāde, mehānika un elektromehānika vienā cehā Zivju ielā 3, Rīgā. Remontējam dīzeļģeneratorus, sūkņus, darbmašīnas un elektrodzinējus.">
+<meta property="og:title" content="STAALF — rūpniecības iekārtu remonts Rīgā">
+<meta property="og:description" content="Metināšana, metālapstrāde, mehānika un elektromehānika vienā cehā Vecmīlgrāvī. Kopš 2015. gada.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F7DB07'/%3E%3Ctext x='16' y='24' font-family='Helvetica,Arial,sans-serif' font-size='24' font-weight='500' text-anchor='middle' fill='%23101315'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{
+  --dz:#F7DB07;          /* signālā dzeltenā no STAALF logotipa */
+  --dz-tumsa:#C9B206;
+  --tinte:#101315;       /* ceha grīda */
+  --betons:#1C2124;
+  --betons-gaiss:#272D31;
+  --terauds:#98A1A7;
+  --putekli:#E6E7E2;     /* gaišais betons */
+  --putekli-tumsi:#D6D8D1;
+  --balts:#FAFAF8;
+  --teksts:#15181A;
+  --teksts-kluss:#565E63;
+  --platums:1180px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--putekli);
+  color:var(--teksts);
+  font-family:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:17px;
+  line-height:1.62;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Chivo,system-ui,"Segoe UI",sans-serif;font-weight:600;margin:0;line-height:1.1}
+h1{font-size:clamp(2.05rem,5.4vw,3.5rem);letter-spacing:-.015em;line-height:1.05}
+h2{font-size:clamp(1.55rem,3.3vw,2.25rem);letter-spacing:-.01em}
+h3{font-size:1.2rem;font-weight:600;letter-spacing:.005em}
+p{margin:0}
+.ietvars{max-width:var(--platums);margin:0 auto;padding:0 22px}
+:focus-visible{outline:3px solid var(--dz);outline-offset:3px}
+.uz-dzeltena :focus-visible{outline-color:var(--tinte)}
+
+/* ---------- galvene ---------- */
+.galvene{background:#000;position:sticky;top:0;z-index:40;border-bottom:1px solid #000}
+.galvene-in{display:flex;align-items:center;gap:20px;min-height:68px;padding-top:8px;padding-bottom:8px}
+.logo{height:38px;width:auto;flex:none}
+.sauklis{color:var(--dz);font-family:Chivo,sans-serif;font-weight:500;font-size:.95rem;letter-spacing:.02em;white-space:nowrap}
+.galvene-atstarpe{flex:1 1 auto}
+.galvenes-zvans{
+  display:inline-flex;align-items:center;min-height:46px;padding:0 20px;
+  background:var(--dz);color:#000;text-decoration:none;
+  font-family:Chivo,sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:.01em;
+}
+.galvenes-zvans:hover{background:#fff}
+
+/* ---------- ievads ---------- */
+.ievads{background:var(--tinte);color:var(--balts);padding:58px 0 0}
+.ievads h1{color:#fff;max-width:17ch}
+.lids{margin-top:22px;max-width:56ch;color:#D4D8DA;font-size:1.1rem}
+.pogas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.poga{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:54px;padding:0 26px;text-decoration:none;
+  font-family:Chivo,sans-serif;font-weight:600;font-size:1.08rem;letter-spacing:.01em;
+}
+.poga-galvena{background:var(--dz);color:#000}
+.poga-galvena:hover{background:#fff}
+.poga-otra{border:2px solid var(--dz);color:var(--dz)}
+.poga-otra:hover{background:var(--dz);color:#000}
+
+/* ---------- foto lentes ---------- */
+.lente{margin-top:40px;position:relative;overflow:hidden;background:#000}
+.lente img{width:100%;height:210px;object-fit:cover;object-position:center}
+.lente-paraksts{
+  position:absolute;left:0;bottom:0;
+  background:rgba(0,0,0,.82);color:var(--terauds);
+  font-size:.9rem;line-height:1.3;padding:8px 14px;
+}
+.lente-gaisa{margin:0}
+.lente-gaisa img{height:230px}
+
+/* ---------- brīdinājuma lente ---------- */
+.bridinajums{
+  height:12px;
+  background:repeating-linear-gradient(45deg,var(--dz) 0 16px,var(--tinte) 16px 32px);
+  margin-top:46px;
+}
+
+/* ---------- cehs ---------- */
+.cehs{background:var(--betons);color:var(--balts);padding:52px 0 60px;overflow:hidden}
+.cehs h2{color:#fff}
+.cehs-ievads{margin-top:14px;max-width:58ch;color:#C6CCCF}
+.posti-apvalks{margin-top:40px}
+.rinda{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.celins{position:relative;height:48px}
+.marsruts{
+  position:absolute;left:-400px;right:-400px;top:22px;height:5px;
+  background:repeating-linear-gradient(90deg,var(--dz) 0 34px,transparent 34px 54px);
+}
+.punkti{position:absolute;inset:0}
+.punkts{position:relative}
+.punkts::before{
+  content:"";position:absolute;left:50%;top:14px;margin-left:-11px;
+  width:22px;height:22px;border-radius:50%;
+  background:var(--dz);box-shadow:0 0 0 5px var(--betons);
+}
+.posti{position:relative}
+.posts{position:relative;background:var(--betons);padding:26px 20px 24px}
+.posts::before,.posts::after{
+  content:"";position:absolute;width:26px;height:26px;pointer-events:none;
+}
+.posts::before{left:0;top:0;border-left:4px solid var(--dz);border-top:4px solid var(--dz)}
+.posts::after{right:0;bottom:0;border-right:4px solid var(--dz);border-bottom:4px solid var(--dz)}
+.posts h3{color:#fff}
+.posts p{margin-top:10px;font-size:1rem;color:#BFC6CA;line-height:1.55}
+.blakus{
+  position:relative;z-index:1;margin-top:26px;background:var(--betons);
+  border:3px dashed rgba(247,219,7,.6);padding:22px 24px;
+  display:flex;flex-wrap:wrap;gap:8px 26px;align-items:baseline;
+}
+.blakus h3{color:var(--dz)}
+.blakus p{color:#BFC6CA;font-size:1rem;max-width:64ch}
+
+/* ---------- agregāti ---------- */
+.agregati{padding:62px 0 8px}
+.agregati-galva{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:34px;align-items:start}
+.agregati-galva p{color:var(--teksts-kluss);max-width:54ch}
+.saraksts{list-style:none;margin:34px 0 0;padding:0;columns:2;column-gap:40px}
+.saraksts li{
+  break-inside:avoid;padding:13px 0 13px 30px;position:relative;
+  border-top:1px solid var(--putekli-tumsi);font-size:1.06rem;
+}
+.saraksts li::before{
+  content:"";position:absolute;left:0;top:19px;width:13px;height:13px;
+  background:var(--dz);border:1px solid var(--teksts);
+}
+
+/* ---------- par uzņēmumu ---------- */
+.par{padding:56px 0 0}
+.par-teksts{max-width:62ch;color:var(--teksts);font-size:1.08rem}
+.par-teksts + .par-teksts{margin-top:16px}
+.rekviziti{
+  list-style:none;margin:34px 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--putekli-tumsi);
+  border:1px solid var(--putekli-tumsi);
+}
+.rekviziti li{background:var(--putekli);padding:18px 18px 20px}
+.rekviziti b{display:block;font-family:Chivo,sans-serif;font-weight:600;font-size:1.45rem;line-height:1.15}
+.rekviziti span{display:block;margin-top:6px;font-size:.95rem;color:var(--teksts-kluss)}
+
+/* ---------- zaglušķi ---------- */
+.trukst{
+  margin-top:26px;border-left:6px solid var(--dz);background:var(--balts);
+  padding:16px 20px;font-size:1rem;
+}
+.trukst b{font-family:Chivo,sans-serif;font-weight:600;display:block;margin-bottom:3px}
+.trukst span{color:var(--teksts-kluss)}
+.trukst-tumss{background:#151A1C;color:#C6CCCF}
+.trukst-tumss b{color:#fff}
+.trukst-tumss span{color:var(--terauds)}
+
+/* ---------- kontakti ---------- */
+.kontakti{background:var(--dz);color:#000;margin-top:62px;padding:56px 0 60px}
+.kontakti h2{color:#000}
+.kontakti-tikls{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:34px}
+.kk h3{font-size:1rem;font-weight:600;letter-spacing:.03em;color:#4A4207}
+.kk .liels{
+  display:inline-flex;align-items:center;min-height:46px;
+  font-family:Chivo,sans-serif;font-weight:600;font-size:1.5rem;letter-spacing:-.01em;
+  color:#000;text-decoration:none;border-bottom:3px solid rgba(0,0,0,.28);
+}
+.kk .liels:hover{border-bottom-color:#000}
+.kontakti .videjs{
+  display:inline-flex;align-items:center;min-height:46px;
+  font-family:Chivo,sans-serif;font-weight:600;font-size:1.15rem;
+  color:#000;text-decoration:none;border-bottom:2px solid rgba(0,0,0,.28);
+}
+.kontakti .videjs:hover{border-bottom-color:#000}
+.kk p{margin-top:8px;font-size:1.02rem}
+.kk .piezime{color:#4A4207;font-size:.95rem}
+.persona{margin-top:34px;border-top:2px solid rgba(0,0,0,.25);padding-top:22px;display:flex;flex-wrap:wrap;gap:6px 24px;align-items:center}
+.persona strong{font-family:Chivo,sans-serif;font-weight:600;font-size:1.15rem}
+
+/* ---------- pēda ---------- */
+.peda{background:#000;color:var(--terauds);padding:34px 0 40px;font-size:.95rem}
+.peda-in{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:flex-start;justify-content:space-between}
+.pometka{max-width:62ch;line-height:1.55}
+.pometka b{color:var(--dz);font-family:Chivo,sans-serif;font-weight:600}
+.peda a{color:var(--terauds)}
+
+/* ---------- planšete ---------- */
+@media (max-width:1000px){
+  .rinda{grid-template-columns:repeat(2,1fr);gap:22px}
+  .agregati-galva{grid-template-columns:1fr;gap:18px}
+  .rekviziti{grid-template-columns:repeat(2,1fr)}
+  .kontakti-tikls{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ---------- telefons ---------- */
+@media (max-width:640px){
+  body{font-size:16.5px}
+  .ietvars{padding:0 18px}
+  .galvene-in{gap:12px;min-height:62px}
+  .logo{height:30px}
+  .sauklis{display:none}
+  .galvenes-zvans{padding:0 15px;font-size:.98rem;min-height:44px}
+  .ievads{padding-top:40px}
+  .ievads h1{max-width:none}
+  .lids{font-size:1.05rem;margin-top:18px}
+  .pogas{gap:11px}
+  .poga{width:100%;min-height:52px;font-size:1.02rem}
+  .lente img{height:170px}
+  .lente-gaisa img{height:190px}
+  .bridinajums{margin-top:34px}
+  .cehs{padding:40px 0 46px}
+  .celins{display:none}
+  .posti{grid-template-columns:1fr;gap:18px;padding-left:30px}
+  .posti::before{
+    content:"";position:absolute;left:6px;top:0;bottom:0;width:5px;
+    background:repeating-linear-gradient(180deg,var(--dz) 0 30px,transparent 30px 50px);
+  }
+  .posts{padding:22px 18px 20px}
+  .blakus{display:block}
+  .blakus p{margin-top:8px}
+  .agregati{padding-top:46px}
+  .saraksts{columns:1;margin-top:26px}
+  .par{padding-top:44px}
+  .rekviziti{grid-template-columns:1fr}
+  .kontakti{margin-top:48px;padding:42px 0 48px}
+  .kontakti-tikls{grid-template-columns:1fr;gap:24px}
+  .kk .liels{font-size:1.32rem}
+  .peda-in{display:block}
+  .peda-in > * + *{margin-top:14px}
+}
+
+/* Uz lapas nav automātiskas kustības — tikai krāsu maiņa pie kursora. */
+</style>
+</head>
+<body>
+
+<header class="galvene">
+  <div class="ietvars galvene-in">
+    <img class="logo" src="img/logo.png" alt="STAALF" width="300" height="89">
+    <span class="sauklis">Tehniskais atbalsts</span>
+    <span class="galvene-atstarpe"></span>
+    <a class="galvenes-zvans" href="tel:+37122322002">+371 22 322 002</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="ievads">
+    <div class="ietvars">
+      <h1>Rūpniecības iekārtu remonts un detaļu izgatavošana Rīgā</h1>
+      <p class="lids">Metināšana, metālapstrāde, mehānika un elektromehānika — vienā cehā Zivju ielā 3. Sabojātu agregātu izjaucam, trūkstošo detaļu izgatavojam uz vietas un iekārtu nododam atpakaļ darbam.</p>
+      <div class="pogas">
+        <a class="poga poga-galvena" href="tel:+37122322002">Zvanīt +371 22 322 002</a>
+        <a class="poga poga-otra" href="mailto:info@staalf.lv">Rakstīt info@staalf.lv</a>
+      </div>
+    </div>
+    <div class="ietvars">
+      <figure class="lente">
+        <img src="img/metalapstrade.jpg" alt="Frēzēšana darbmašīnā: griezējinstruments apstrādā metāla detaļu" width="980" height="350">
+        <figcaption class="lente-paraksts">Attēls no pašreizējās vietnes staalf.lv</figcaption>
+      </figure>
+      <div class="trukst trukst-tumss" data-zaglushka="фотографии цеха и работ клиента — сейчас стоят три кадра с их нынешнего сайта">
+        <b>Šeit trūkst Jūsu fotoattēlu</b>
+        <span>Lapā pagaidām izmantoti trīs attēli no staalf.lv. Atsūtiet ceha, darbgaldu un pabeigtu darbu fotoattēlus — nomainīsim visus trīs.</span>
+      </div>
+    </div>
+    <div class="bridinajums"></div>
+  </section>
+
+  <section class="cehs">
+    <div class="ietvars">
+      <h2>Četras darbnīcas zem viena jumta</h2>
+      <p class="cehs-ievads">Viena detaļa iziet cauri visiem posmiem pie viena izpildītāja — nav jāmeklē atsevišķi metinātājs, virpotājs un elektriķis.</p>
+
+      <div class="posti-apvalks">
+        <div class="celins" aria-hidden="true">
+          <div class="marsruts"></div>
+          <div class="punkti rinda"><i class="punkts"></i><i class="punkts"></i><i class="punkts"></i><i class="punkts"></i></div>
+        </div>
+        <div class="posti rinda">
+          <article class="posts">
+            <h3>Metināšana</h3>
+            <p>Sertificēti speciālisti darbam ar visa veida metāliem — plašs biezumu un konfigurāciju diapazons, no plāksnes līdz caurulei.</p>
+          </article>
+          <article class="posts">
+            <h3>Metālapstrāde</h3>
+            <p>Virpošana, frēzēšana, slīpēšana. Bojātu detaļu atjaunošana, jaunu detaļu un rezerves daļu izgatavošana.</p>
+          </article>
+          <article class="posts">
+            <h3>Mehānika</h3>
+            <p>Mehāniķi un atslēdznieki mehānisku un hidraulisku agregātu un sistēmu remontam, atjaunošanai un apkalpošanai.</p>
+          </article>
+          <article class="posts">
+            <h3>Elektromehānika</h3>
+            <p>Elektrisko ķēžu, apakšstaciju, elektrodzinēju un pārējo rūpniecības elektroiekārtu projektēšana, instalācija un remonts.</p>
+          </article>
+        </div>
+        <div class="blakus">
+          <h3>Citi pakalpojumi</h3>
+          <p>Iekšējās un ārējās apdares darbi un celtniecības remonts: arhitekti-projektētāji, betonētāji, flīzētāji, jumiķi, krāsotāji, apmetēji.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="agregati">
+    <div class="ietvars">
+      <div class="agregati-galva">
+        <h2>Ar ko strādājam</h2>
+        <p>Ražošanas iekārtas, spēka agregāti un to elektriskā daļa. Ja detaļa vairs nav nopērkama, izgatavojam to no jauna.</p>
+      </div>
+      <ul class="saraksts">
+        <li>Dīzeļģeneratori</li>
+        <li>Dzinēji</li>
+        <li>Hidrauliskie sūkņi</li>
+        <li>Ražošanas iekārtas un darbmašīnas</li>
+        <li>Elektrodzinēji</li>
+        <li>Apakšstacijas un elektriskās ķēdes</li>
+        <li>Jaunas detaļas un rezerves daļas</li>
+        <li>Bojātu detaļu atjaunošana</li>
+      </ul>
+      <div class="trukst" data-zaglushka="объекты или постоянные клиенты, которых можно назвать на сайте">
+        <b>Šeit varētu būt Jūsu darbu saraksts</b>
+        <span>Nosauciet divus trīs objektus vai pastāvīgos klientus, ko drīkstam minēt — tas pasūtītājam pasaka vairāk nekā jebkurš apraksts.</span>
+      </div>
+    </div>
+    <div class="ietvars">
+      <figure class="lente">
+        <img src="img/mehanika.jpg" alt="Meistara rokas pie izjaukta mehāniska agregāta ar zobratiem" width="980" height="350">
+        <figcaption class="lente-paraksts">Attēls no pašreizējās vietnes staalf.lv</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="par">
+    <div class="ietvars">
+      <h2>Par uzņēmumu</h2>
+      <p class="par-teksts" style="margin-top:18px">SIA STAALF ir ražošanas apvienība, kas strādā metālapstrādes, remonta un mehānisko agregātu apkalpošanas jomā — tajā skaitā dzinēji, dīzeļģeneratori, ražošanas iekārtas un darbmašīnas.</p>
+      <p class="par-teksts">Uzņēmums nodarbojas arī ar dažādu elektroiekārtu uzstādīšanu, instalāciju, apkalpošanu un remontu: elektrodzinēji, apakšstacijas, elektriskās ķēdes.</p>
+      <ul class="rekviziti">
+        <li><b>2015</b><span>uzņēmums dibināts 3. augustā</span></li>
+        <li><b>20+</b><span>darbinieku cehā un birojā</span></li>
+        <li><b>Zivju iela 3</b><span>birojs un ražošana, Rīga, LV-1015</span></li>
+        <li><b>40103918367</b><span>reģ. Nr.; PVN reģ. Nr. LV40103918367</span></li>
+      </ul>
+      <div class="trukst" data-zaglushka="часы работы цеха и сертификаты сварщиков — подтвердить у клиента">
+        <b>Darba laiks un sertifikāti</b>
+        <span>Pašreizējā vietnē darba laiks nav norādīts. Atsūtiet ceha darba laiku un metinātāju sertifikātu nosaukumus — tos liksim šajā blokā.</span>
+      </div>
+    </div>
+    <div class="ietvars">
+      <figure class="lente lente-gaisa" style="margin-top:40px">
+        <img src="img/elektromehanika.jpg" alt="Rinda automātslēdžu elektrosadales skapī ar pievienotiem vadiem" width="980" height="350">
+        <figcaption class="lente-paraksts">Attēls no pašreizējās vietnes staalf.lv</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="kontakti uz-dzeltena">
+    <div class="ietvars">
+      <h2>Sazinieties ar mums</h2>
+      <div class="kontakti-tikls">
+        <div class="kk">
+          <h3>Birojs un ražošana</h3>
+          <a class="liels" href="tel:+37122322002">+371 22 322 002</a>
+          <p>Zivju iela 3, Rīga, LV-1015</p>
+        </div>
+        <div class="kk">
+          <h3>E-pasts</h3>
+          <a class="videjs" href="mailto:info@staalf.lv">info@staalf.lv</a><br>
+          <a class="videjs" href="mailto:info@staalf.com">info@staalf.com</a>
+        </div>
+        <div class="kk">
+          <h3>Rekvizīti</h3>
+          <p>STAALF SIA<br>Reģ. Nr. 40103918367<br>PVN reģ. Nr. LV40103918367</p>
+        </div>
+      </div>
+      <div class="persona">
+        <strong>Pavel Kireyev</strong>
+        <span>tehniskais direktors</span>
+        <a class="videjs" href="tel:+37122333203">+371 22 333 203</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="peda">
+  <div class="ietvars peda-in">
+    <p class="pometka" data-kontsept-pometka>
+      <b>Neoficiāla vietnes koncepcija.</b> Šī nav SIA STAALF oficiālā vietne. Lapu sagatavoja Artur Vasilyan — vasilyanaptyp-oss.github.io. Visi teksti un attēli ņemti no staalf.lv un publiskiem reģistriem.
+    </p>
+    <p>Pašreizējā vietne: <a href="https://staalf.lv/">staalf.lv</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
