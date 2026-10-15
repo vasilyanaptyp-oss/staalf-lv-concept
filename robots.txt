@@ -1,2 +1,5 @@
 User-agent: *
 Disallow: /
+
+# Pirms publiskošanas: noņemt Disallow un meta robots noindex katrā lapā.
+Sitemap: https://staalf.lv/sitemap.xml

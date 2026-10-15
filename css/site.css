@@ -1,0 +1,455 @@
+/* STAALF: kopīgais stils. Fonti glabājas lokāli, latin un latin-ext apakškopas. */
+@font-face{font-family:"Chivo";font-style:normal;font-weight:400 700;font-display:swap;
+  src:url("../fonts/chivo-latin-ext.woff2") format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Chivo";font-style:normal;font-weight:400 700;font-display:swap;
+  src:url("../fonts/chivo-latin.woff2") format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Source Sans 3";font-style:normal;font-weight:400 700;font-display:swap;
+  src:url("../fonts/sourcesans3-latin-ext.woff2") format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Source Sans 3";font-style:normal;font-weight:400 700;font-display:swap;
+  src:url("../fonts/sourcesans3-latin.woff2") format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{
+  --dz:#F7DB07;          /* signālā dzeltenā no STAALF logotipa */
+  --dz-tumsa:#C9B206;
+  --tinte:#101315;       /* ceha grīda */
+  --betons:#1C2124;
+  --betons-gaiss:#272D31;
+  --terauds:#98A1A7;
+  --putekli:#E6E7E2;     /* gaišais betons */
+  --putekli-tumsi:#D6D8D1;
+  --balts:#FAFAF8;
+  --teksts:#15181A;
+  --teksts-kluss:#565E63;
+  --kluda:#9C1C12;
+  --platums:1180px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:90px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--putekli);color:var(--teksts);
+  font-family:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:17px;line-height:1.62;overflow-x:hidden;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:Chivo,system-ui,"Segoe UI",sans-serif;font-weight:600;margin:0;line-height:1.1}
+h1{font-size:clamp(2.05rem,5.4vw,3.5rem);letter-spacing:-.015em;line-height:1.05;overflow-wrap:break-word}
+h2{font-size:clamp(1.55rem,3.3vw,2.25rem);letter-spacing:-.01em}
+h3{font-size:1.2rem;font-weight:600;letter-spacing:.005em}
+p{margin:0}
+.ietvars{max-width:var(--platums);margin:0 auto;padding:0 22px}
+:focus-visible{outline:3px solid var(--dz);outline-offset:3px}
+.uz-dzeltena :focus-visible,.uz-gaisa :focus-visible{outline-color:var(--tinte)}
+.skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--dz);color:#000;padding:12px 18px;font-family:Chivo,sans-serif;font-weight:600;text-decoration:none}
+.skip:focus{left:8px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- galvene ---------- */
+.galvene{background:#000;position:sticky;top:0;z-index:40;border-bottom:1px solid #000}
+.galvene-in{display:flex;align-items:center;gap:20px;min-height:68px;padding-top:8px;padding-bottom:8px}
+.logo-saite{display:inline-flex;align-items:center;min-height:44px;flex:none}
+.logo{height:38px;width:auto;flex:none}
+.sauklis{color:var(--dz);font-family:Chivo,sans-serif;font-weight:500;font-size:.95rem;letter-spacing:.02em;white-space:nowrap}
+.galvene-atstarpe{flex:1 1 auto}
+.izvelne{display:flex;align-items:center;gap:2px}
+.izvelne a{
+  display:inline-flex;align-items:center;min-height:46px;padding:0 13px;
+  color:#E8EAEB;text-decoration:none;font-family:Chivo,sans-serif;font-weight:500;font-size:1rem;letter-spacing:.01em;
+  border-bottom:3px solid transparent;
+}
+.izvelne a:hover{color:#fff;border-bottom-color:var(--dz)}
+.izvelne a[aria-current]{color:var(--dz);border-bottom-color:var(--dz)}
+.galvenes-zvans{
+  display:inline-flex;align-items:center;min-height:46px;padding:0 20px;
+  background:var(--dz);color:#000;text-decoration:none;
+  font-family:Chivo,sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:.01em;white-space:nowrap;
+}
+.galvenes-zvans:hover{background:#fff}
+.zvans-iss{display:none}
+.izv-poga{
+  display:none;width:48px;height:48px;padding:0;border:2px solid var(--dz);background:transparent;color:var(--dz);cursor:pointer;
+  align-items:center;justify-content:center;flex:none;
+}
+.izv-poga:hover{background:var(--dz);color:#000}
+.izv-poga svg{width:24px;height:24px;display:block}
+.izv-poga .x{display:none}
+.izv-poga[aria-expanded="true"] .x{display:block}
+.izv-poga[aria-expanded="true"] .b{display:none}
+
+/* ---------- ceļa drupatas ---------- */
+.drupatas{margin:0 0 26px;font-size:.95rem}
+.drupatas ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:0 4px;align-items:center}
+.drupatas li{display:inline-flex;align-items:center}
+.drupatas li + li::before{content:"/";color:var(--terauds);margin-right:6px}
+.drupatas a{display:inline-flex;align-items:center;min-height:44px;color:#C6CCCF;text-decoration:underline;text-decoration-color:rgba(198,204,207,.4);text-underline-offset:3px}
+.drupatas a:hover{color:var(--dz);text-decoration-color:var(--dz)}
+.drupatas [aria-current]{color:#fff}
+
+/* ---------- ievads ---------- */
+.ievads{background:var(--tinte);color:var(--balts);padding:58px 0 0}
+.ievads-iekseja{padding-top:14px}
+.ievads h1{color:#fff;max-width:17ch}
+.ievads-iekseja h1{max-width:22ch}
+.lids{margin-top:22px;max-width:60ch;color:#D4D8DA;font-size:1.1rem}
+.pogas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.poga{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:54px;padding:0 26px;text-decoration:none;text-align:center;
+  font-family:Chivo,sans-serif;font-weight:600;font-size:1.08rem;letter-spacing:.01em;cursor:pointer;border:0;
+}
+.poga-galvena{background:var(--dz);color:#000}
+.poga-galvena:hover{background:#fff}
+.poga-otra{border:2px solid var(--dz);color:var(--dz);background:transparent}
+.poga-otra:hover{background:var(--dz);color:#000}
+.uz-gaisa .poga-otra,.uz-dzeltena .poga-otra{border-color:#000;color:#000}
+.uz-gaisa .poga-otra:hover,.uz-dzeltena .poga-otra:hover{background:#000;color:var(--dz)}
+.uz-dzeltena .poga-galvena{background:#000;color:var(--dz)}
+.uz-dzeltena .poga-galvena:hover{background:#fff;color:#000}
+.uz-gaisa .poga-galvena{background:var(--tinte);color:var(--dz)}
+.uz-gaisa .poga-galvena:hover{background:var(--dz);color:#000;outline:2px solid #000}
+
+/* ---------- foto lentes ---------- */
+.lente{margin:40px 0 0;position:relative;overflow:hidden;background:#000}
+.lente img{width:100%;height:210px;object-fit:cover;object-position:center}
+.lente-gaisa{margin:0}
+.lente-gaisa img{height:230px}
+.lente-liela img{height:300px}
+.ievads .lente{margin-top:40px}
+
+/* ---------- brīdinājuma lente ---------- */
+.bridinajums{
+  height:12px;
+  background:repeating-linear-gradient(45deg,var(--dz) 0 16px,var(--tinte) 16px 32px);
+  margin-top:46px;
+}
+
+/* ---------- cehs ---------- */
+.cehs{background:var(--betons);color:var(--balts);padding:52px 0 60px;overflow:hidden}
+.cehs h2{color:#fff}
+.cehs-ievads{margin-top:14px;max-width:58ch;color:#C6CCCF}
+.posti-apvalks{margin-top:40px}
+.rinda{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.celins{position:relative;height:48px}
+.marsruts{
+  position:absolute;left:-400px;right:-400px;top:22px;height:5px;
+  background:repeating-linear-gradient(90deg,var(--dz) 0 34px,transparent 34px 54px);
+}
+.punkti{position:absolute;inset:0}
+.punkts{position:relative}
+.punkts::before{
+  content:"";position:absolute;left:50%;top:14px;margin-left:-11px;
+  width:22px;height:22px;border-radius:50%;
+  background:var(--dz);box-shadow:0 0 0 5px var(--betons);
+}
+.posti{position:relative}
+.posts{position:relative;background:var(--betons);padding:26px 20px 24px;display:flex;flex-direction:column}
+.posts::before,.posts::after{
+  content:"";position:absolute;width:26px;height:26px;pointer-events:none;
+}
+.posts::before{left:0;top:0;border-left:4px solid var(--dz);border-top:4px solid var(--dz)}
+.posts::after{right:0;bottom:0;border-right:4px solid var(--dz);border-bottom:4px solid var(--dz)}
+.posts h3{color:#fff}
+.posts p{margin-top:10px;font-size:1rem;color:#BFC6CA;line-height:1.55;flex:1 1 auto}
+.vairak{
+  display:inline-flex;align-items:center;min-height:44px;margin-top:12px;align-self:flex-start;
+  color:var(--dz);font-family:Chivo,sans-serif;font-weight:600;font-size:1rem;text-decoration:none;
+  border-bottom:2px solid rgba(247,219,7,.45);
+}
+.vairak::after{content:"\2192";margin-left:8px}
+.vairak:hover{border-bottom-color:var(--dz);color:#fff}
+.uz-gaisa .vairak,.gaisa .vairak{color:var(--teksts);border-bottom-color:rgba(0,0,0,.35)}
+.gaisa .vairak:hover{color:#000;border-bottom-color:#000}
+.blakus{
+  position:relative;z-index:1;margin-top:26px;background:var(--betons);
+  border:3px dashed rgba(247,219,7,.6);padding:22px 24px;
+  display:flex;flex-wrap:wrap;gap:8px 26px;align-items:baseline;
+}
+.blakus h3{color:var(--dz)}
+.blakus p{color:#BFC6CA;font-size:1rem;max-width:64ch}
+.blakus .vairak{margin-top:0}
+
+/* ---------- sadaļas gaišajā fonā ---------- */
+.sadala{padding:62px 0 8px}
+.sadala + .sadala{padding-top:54px}
+.sadala-galva{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:34px;align-items:start}
+.sadala-galva p{color:var(--teksts-kluss);max-width:54ch}
+.teksts-bloks{max-width:64ch}
+.teksts-bloks p{font-size:1.08rem}
+.teksts-bloks p + p{margin-top:16px}
+.divi{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:48px;align-items:start}
+.malu-kaste{background:var(--balts);border-left:6px solid var(--dz);padding:22px 24px}
+.malu-kaste h3{margin-bottom:10px}
+.malu-kaste ul{margin:0;padding:0;list-style:none}
+.malu-kaste li{padding:7px 0 7px 24px;position:relative;font-size:1.02rem}
+.malu-kaste li::before{content:"";position:absolute;left:0;top:15px;width:11px;height:11px;background:var(--dz);border:1px solid var(--teksts)}
+.malu-kaste p{color:var(--teksts-kluss);font-size:1rem;margin-top:10px}
+.saraksts{list-style:none;margin:34px 0 0;padding:0;columns:2;column-gap:40px}
+.saraksts-bez{margin-top:20px}
+.saraksts li{
+  break-inside:avoid;padding:13px 0 13px 30px;position:relative;
+  border-top:1px solid var(--putekli-tumsi);font-size:1.06rem;
+}
+.saraksts li::before{
+  content:"";position:absolute;left:0;top:19px;width:13px;height:13px;
+  background:var(--dz);border:1px solid var(--teksts);
+}
+.saraksts li small{display:block;color:var(--teksts-kluss);font-size:.95rem;line-height:1.5;margin-top:2px}
+.solis-saraksts{list-style:none;margin:28px 0 0;padding:0;counter-reset:solis;display:grid;grid-template-columns:repeat(2,1fr);gap:18px 26px}
+.solis-saraksts li{counter-increment:solis;position:relative;padding:16px 18px 18px 64px;background:var(--balts);min-height:76px}
+.solis-saraksts li::before{
+  content:counter(solis);position:absolute;left:0;top:0;bottom:0;width:46px;
+  display:flex;align-items:center;justify-content:center;background:var(--dz);color:#000;
+  font-family:Chivo,sans-serif;font-weight:700;font-size:1.3rem;
+}
+.solis-saraksts b{display:block;font-family:Chivo,sans-serif;font-weight:600}
+.solis-saraksts span{color:var(--teksts-kluss);font-size:.98rem;display:block;margin-top:2px}
+
+/* ---------- darbnīcu kartītes ar foto ---------- */
+.kartites{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:34px}
+.kartite{background:var(--balts);display:flex;flex-direction:column;position:relative}
+.kartite img{width:100%;height:210px;object-fit:cover;background:#000}
+.kartite-saturs{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1 1 auto}
+.kartite h2,.kartite h3{font-size:1.45rem}
+.kartite p{margin-top:10px;color:var(--teksts-kluss);flex:1 1 auto}
+.kartite ul{margin:14px 0 0;padding:0;list-style:none}
+.kartite li{padding:4px 0 4px 22px;position:relative;font-size:1rem}
+.kartite li::before{content:"";position:absolute;left:0;top:12px;width:10px;height:10px;background:var(--dz);border:1px solid var(--teksts)}
+.kartite-plata{grid-column:1 / -1;flex-direction:row}
+.kartite-plata .kartite-saturs{justify-content:center}
+.kartite-plata img{width:42%;height:auto;min-height:100%}
+
+/* ---------- tabula "ko kur" ---------- */
+.tabula-apvalks{margin-top:30px;overflow-x:auto}
+.tabula{width:100%;border-collapse:collapse;background:var(--balts);min-width:560px}
+.tabula th,.tabula td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--putekli-tumsi);vertical-align:top}
+.tabula th{font-family:Chivo,sans-serif;font-weight:600;background:var(--tinte);color:#fff;border-bottom:0}
+.tabula td a{display:inline-flex;align-items:center;min-height:44px;font-family:Chivo,sans-serif;font-weight:600;text-decoration-color:var(--dz);text-decoration-thickness:3px;text-underline-offset:4px}
+
+/* ---------- iekārtu režģis ---------- */
+.iekartas{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:34px}
+.iekarta{background:var(--balts);padding:22px 24px 20px;position:relative;display:flex;flex-direction:column}
+.iekarta::before{content:"";position:absolute;left:0;top:0;width:26px;height:26px;border-left:4px solid var(--dz);border-top:4px solid var(--dz)}
+.iekarta h2,.iekarta h3{font-size:1.3rem}
+.iekarta p{margin-top:8px;color:var(--teksts-kluss);font-size:1rem}
+.iekarta .ar{margin-top:12px;display:flex;flex-wrap:wrap;gap:2px 18px}
+.iekarta .ar a{display:inline-flex;align-items:center;min-height:44px;font-family:Chivo,sans-serif;font-weight:600;font-size:.98rem;text-decoration-color:var(--dz);text-decoration-thickness:3px;text-underline-offset:4px}
+.foto-pari{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+.foto-pari-2{grid-template-columns:repeat(2,1fr)}
+.foto-pari figure{margin:0;background:#000}
+.foto-pari img{width:100%;height:220px;object-fit:cover}
+
+/* ---------- Par uzņēmumu ---------- */
+.par{padding:56px 0 0}
+.par-teksts{max-width:62ch;color:var(--teksts);font-size:1.08rem}
+.par-teksts + .par-teksts{margin-top:16px}
+.rekviziti{
+  list-style:none;margin:34px 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--putekli-tumsi);
+  border:1px solid var(--putekli-tumsi);
+}
+.rekviziti li{background:var(--putekli);padding:18px 18px 20px}
+.rekviziti b{display:block;font-family:Chivo,sans-serif;font-weight:600;font-size:1.45rem;line-height:1.15;overflow-wrap:anywhere}
+.rekviziti span{display:block;margin-top:6px;font-size:.95rem;color:var(--teksts-kluss)}
+.dati{margin:30px 0 0;display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr);gap:0;border-top:1px solid var(--putekli-tumsi)}
+.dati dt,.dati dd{margin:0;padding:12px 0;border-bottom:1px solid var(--putekli-tumsi)}
+.dati dt{color:var(--teksts-kluss);padding-right:18px}
+.dati dd{font-weight:600;overflow-wrap:anywhere}
+.dati dd a{font-weight:600}
+
+/* ---------- kontakti ---------- */
+.kontakti{background:var(--dz);color:#000;margin-top:62px;padding:56px 0 60px}
+.kontakti h2{color:#000}
+.kontakti-tikls{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:34px}
+.kk h3{font-size:1rem;font-weight:600;letter-spacing:.03em;color:#4A4207}
+.kk .liels{
+  display:inline-flex;align-items:center;min-height:46px;
+  font-family:Chivo,sans-serif;font-weight:600;font-size:1.5rem;letter-spacing:-.01em;
+  color:#000;text-decoration:none;border-bottom:3px solid rgba(0,0,0,.28);
+}
+.kk .liels:hover{border-bottom-color:#000}
+.kontakti .videjs,.videjs{
+  display:inline-flex;align-items:center;min-height:46px;
+  font-family:Chivo,sans-serif;font-weight:600;font-size:1.15rem;
+  color:inherit;text-decoration:none;border-bottom:2px solid rgba(0,0,0,.28);
+}
+.kontakti .videjs:hover,.videjs:hover{border-bottom-color:#000}
+.kk p{margin-top:8px;font-size:1.02rem}
+.persona{margin-top:34px;border-top:2px solid rgba(0,0,0,.25);padding-top:22px;display:flex;flex-wrap:wrap;gap:6px 24px;align-items:center}
+.persona strong{font-family:Chivo,sans-serif;font-weight:600;font-size:1.15rem}
+.kontakti .pogas{margin-top:26px}
+
+/* ---------- kontaktu lapa ---------- */
+.kontaktu-lapa{padding:56px 0 0}
+.kontaktu-tikls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:50px;align-items:start}
+.kontakta-bloks + .kontakta-bloks{margin-top:26px}
+.kontakta-bloks h2{font-size:1.15rem;letter-spacing:.02em;color:var(--teksts-kluss);font-weight:600}
+.kontakta-bloks .liels{
+  display:inline-flex;align-items:center;min-height:46px;font-family:Chivo,sans-serif;font-weight:600;font-size:1.5rem;
+  letter-spacing:-.01em;text-decoration:none;border-bottom:3px solid var(--dz);margin-top:2px;
+}
+.kontakta-bloks .liels:hover{background:var(--dz)}
+.kontakta-bloks .videjs{border-bottom-color:var(--dz);border-bottom-width:3px}
+.kontakta-bloks .videjs:hover{background:var(--dz)}
+.kontakta-bloks p{margin-top:4px}
+.forma{background:var(--balts);padding:28px 28px 30px;border-top:6px solid var(--dz)}
+.forma h2{font-size:1.6rem}
+.forma-ievads{margin-top:8px;color:var(--teksts-kluss);font-size:1rem}
+.lauks{margin-top:18px}
+.lauks label{display:block;font-family:Chivo,sans-serif;font-weight:600;font-size:.98rem;margin-bottom:6px}
+.lauks .nav-obl{font-weight:400;font-family:"Source Sans 3",sans-serif;color:var(--teksts-kluss)}
+.lauks input,.lauks select,.lauks textarea{
+  display:block;width:100%;min-height:48px;padding:11px 14px;
+  font:inherit;font-size:1.02rem;color:var(--teksts);background:#fff;
+  border:2px solid #8A9298;border-radius:0;
+}
+.lauks textarea{min-height:120px;resize:vertical}
+.lauks input:hover,.lauks select:hover,.lauks textarea:hover{border-color:var(--teksts)}
+.lauks input:focus-visible,.lauks select:focus-visible,.lauks textarea:focus-visible{outline:3px solid var(--dz);outline-offset:0;border-color:var(--teksts)}
+.lauks [aria-invalid="true"]{border-color:var(--kluda);background:#FFF6F5}
+.kluda-teksts{display:none;margin-top:6px;color:var(--kluda);font-weight:600;font-size:.97rem}
+.lauks [aria-invalid="true"] ~ .kluda-teksts{display:block}
+.lauku-rinda{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+.forma-kopsavilkums{display:none;margin-top:20px;padding:14px 18px;border-left:6px solid var(--kluda);background:#FFF1EF;color:var(--kluda);font-weight:600}
+.forma-kopsavilkums.redzams{display:block}
+.forma-piezime{margin-top:16px;color:var(--teksts-kluss);font-size:.95rem}
+.forma .poga{margin-top:22px;min-height:56px}
+.karte{margin-top:56px}
+.karte iframe{display:block;width:100%;height:380px;border:0;background:var(--putekli-tumsi)}
+.karte-saite{margin-top:12px}
+.karte-saite a{display:inline-flex;align-items:center;min-height:44px}
+
+/* ---------- politikas lapa ---------- */
+.politika{padding:56px 0 20px}
+.politika .teksts-bloks h2{font-size:1.5rem;margin-top:38px}
+.politika .teksts-bloks h2:first-child{margin-top:0}
+.politika .teksts-bloks h2 + p{margin-top:12px}
+.politika ul{margin:12px 0 0;padding:0 0 0 22px}
+.politika li{margin-top:6px;font-size:1.08rem}
+.politika p + ul,.politika ul + p{margin-top:14px}
+.atjaunots{color:var(--teksts-kluss);margin-top:34px !important;font-size:.98rem !important}
+
+/* ---------- 404 ---------- */
+.nav-lapas{padding:70px 0 20px}
+.nav-lapas .liels-skaitlis{font-family:Chivo,sans-serif;font-weight:700;font-size:clamp(5rem,20vw,10rem);line-height:1;color:var(--tinte);letter-spacing:-.04em}
+.nav-lapas h1{margin-top:6px}
+.nav-lapas .lids{color:var(--teksts-kluss)}
+
+/* ---------- pēda ---------- */
+.peda{background:#000;color:var(--terauds);padding:46px 0 34px;font-size:.98rem}
+.peda-tikls{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:30px 40px}
+.peda h2{font-size:1rem;color:var(--dz);letter-spacing:.04em;margin-bottom:8px}
+.peda ul{list-style:none;margin:0;padding:0}
+.peda a{color:#C2C9CD;text-decoration:none}
+.peda a:hover{color:var(--dz);text-decoration:underline}
+.peda li a,.peda .pk a{display:inline-flex;align-items:center;min-height:44px}
+.peda p{margin-top:2px}
+.peda .logo{height:34px;margin-bottom:12px}
+.peda-apakss{margin-top:30px;padding-top:20px;border-top:1px solid #272D31;display:flex;flex-wrap:wrap;gap:6px 28px;justify-content:space-between;align-items:center}
+.peda-apakss a{display:inline-flex;align-items:center;min-height:44px}
+
+/* ---------- planšete ---------- */
+@media (max-width:1240px){
+  .sauklis{display:none}
+}
+@media (max-width:1000px){
+  .rinda{grid-template-columns:repeat(2,1fr);gap:22px}
+  .sadala-galva{grid-template-columns:1fr;gap:18px}
+  .rekviziti{grid-template-columns:repeat(2,1fr)}
+  .kontakti-tikls{grid-template-columns:repeat(2,1fr)}
+  .divi{grid-template-columns:1fr;gap:30px}
+  .kontaktu-tikls{grid-template-columns:1fr;gap:38px}
+  .peda-tikls{grid-template-columns:1fr 1fr}
+  .foto-pari{grid-template-columns:1fr 1fr}
+  .foto-pari figure:last-child{display:none}
+  .foto-pari-2 figure:last-child{display:block}
+  .kartite-plata{flex-direction:column}
+  .kartite-plata img{width:100%;height:210px;min-height:0}
+}
+@media (max-width:960px){
+  .izv-poga{display:inline-flex}
+  .galvene-in{position:relative}
+  .izvelne{
+    display:none;position:absolute;left:0;right:0;top:100%;background:#000;flex-direction:column;align-items:stretch;
+    padding:6px 22px 18px;border-top:1px solid #272D31;border-bottom:3px solid var(--dz);gap:0;
+    max-height:calc(100vh - 80px);overflow-y:auto;
+  }
+  .izvelne.atverta{display:flex}
+  .izvelne a{min-height:52px;font-size:1.1rem;border-bottom:1px solid #20262A;padding:0 4px}
+  .izvelne a:hover,.izvelne a[aria-current]{border-bottom-color:#20262A;color:var(--dz)}
+  .galvene-atstarpe{display:block}
+}
+
+/* ---------- telefons ---------- */
+@media (max-width:640px){
+  body{font-size:16.5px}
+  .ietvars{padding:0 18px}
+  .galvene-in{gap:10px;min-height:62px}
+  .logo{height:30px}
+  .zvans-pilns{display:none}
+  .zvans-iss{display:inline}
+  .galvenes-zvans{padding:0 14px;font-size:.98rem;min-height:44px}
+  .izvelne{padding:6px 18px 18px}
+  .ievads{padding-top:40px}
+  .ievads-iekseja{padding-top:8px}
+  .ievads h1,.ievads-iekseja h1{max-width:none}
+  .lids{font-size:1.05rem;margin-top:18px}
+  .pogas{gap:11px}
+  .poga{width:100%;min-height:52px;font-size:1.02rem}
+  .lente img{height:170px}
+  .lente-gaisa img{height:190px}
+  .lente-liela img{height:200px}
+  .bridinajums{margin-top:34px}
+  .cehs{padding:40px 0 46px}
+  .celins{display:none}
+  .posti{grid-template-columns:1fr;gap:18px;padding-left:30px}
+  .posti::before{
+    content:"";position:absolute;left:6px;top:0;bottom:0;width:5px;
+    background:repeating-linear-gradient(180deg,var(--dz) 0 30px,transparent 30px 50px);
+  }
+  .posts{padding:22px 18px 20px}
+  .blakus{display:block}
+  .blakus p{margin-top:8px}
+  .sadala{padding-top:46px}
+  .sadala + .sadala{padding-top:40px}
+  .saraksts{columns:1;margin-top:26px}
+  .solis-saraksts{grid-template-columns:1fr}
+  .kartites,.iekartas{grid-template-columns:1fr;gap:18px}
+  .kartite-saturs{padding:18px 18px 20px}
+  .foto-pari{grid-template-columns:1fr}
+  .foto-pari figure:nth-child(2){display:none}
+  .foto-pari-2{grid-template-columns:1fr}
+  .foto-pari-2 figure:nth-child(2){display:block}
+  .foto-pari img{height:190px}
+  .par{padding-top:44px}
+  .rekviziti{grid-template-columns:1fr}
+  .dati{grid-template-columns:1fr}
+  .dati dt{border-bottom:0;padding-bottom:0}
+  .kontakti{margin-top:48px;padding:42px 0 48px}
+  .kontakti-tikls{grid-template-columns:1fr;gap:24px}
+  .kk .liels{font-size:1.32rem}
+  .kontaktu-lapa{padding-top:40px}
+  .kontakta-bloks .liels{font-size:1.32rem}
+  .forma{padding:22px 18px 24px}
+  .lauku-rinda{grid-template-columns:1fr}
+  .karte iframe{height:300px}
+  .politika{padding-top:40px}
+  .nav-lapas{padding-top:44px}
+  .peda{padding-top:36px}
+  .peda-tikls{grid-template-columns:1fr;gap:22px}
+  .peda-apakss{display:block}
+  .tabula th,.tabula td{padding:12px 12px}
+}
+@media (max-width:360px){
+  .logo{height:26px}
+  .galvenes-zvans{padding:0 11px}
+}
+
+/* teksta saites ar 44 px trāpījuma laukumu telefonā */
+@media (max-width:640px){
+  .politika a,.forma-piezime a{display:inline-block;padding:10px 2px;margin:-10px 0}
+}
